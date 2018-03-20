@@ -90,7 +90,13 @@ $menu_sub = main_menu(192, $lang);
         <div id="top-bar">
             <div id="container" class="clearfix">
                 <div class="widget_cart fl-right">
-                    <a href="cart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i>Giỏ Hàng(3)</a>
+                    <?php 
+                        $total_tu = 0;
+                        foreach ($_SESSION['shopping_cart'] as $value) {
+                            $total_tu++;
+                        }
+                    ?>
+                    <a href="/cart-detail" class="shopping-cart"><i class="fas fa-shopping-cart"></i>Giỏ Hàng(<?php echo $total_tu;?>)</a>
                 </div>
                 <form role="search" method="get" id="top-search" action="" class="form-search fl-left">
                     <input type="search" class="search-field" placeholder="Tìm kiếm sản phẩm..." value="" name="s" title="Search for:">
