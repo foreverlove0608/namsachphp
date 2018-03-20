@@ -80,7 +80,6 @@
     <!-- phân trang -->
     <nav class="woocommerce-pagination">
         <div>
-            <!-- <?= $paging ?> -->
             <?= $rows['paging'] ?>
         </div>   
     </nav>

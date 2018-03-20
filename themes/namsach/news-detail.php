@@ -1,8 +1,9 @@
+<!--TRANG DÙNG ĐỂ HIỂN THỊ CHI TIẾT THỰC ĐƠN (TIN TỨC)-->
 <?php 
     $action_news = new action_news(); 
     $slug = isset($_GET['slug']) ? $_GET['slug'] : '';
-
     $rowLang = $action_news->getNewsLangDetail_byUrl($slug,$lang);
+    //print_r($rowLang);die;
     $row = $action_news->getNewsDetail_byId($rowLang['news_id'],$lang);
     $_SESSION['sidebar'] = 'newsDetail';
 ?>
@@ -26,38 +27,44 @@
     }
     $url_lang = get_url_lang($slug, $lang);
 ?>
-<link rel="stylesheet" type="text/css" href="/css/templates/news_tpl_pageDetail.css">
-<style type="text/css">
-    .contentPageNewsDetail * {
-        float: none;
-    }
+<div class="sub-header products">
 
-    .contentPageNewsDetail li {
-        list-style-type: disc;
-    }
-</style>
-<div id="Content-pageDetailNews">
-    <div class="Center-Width">  
-        <div class="Infor-Width">   
-            <div class="container">
-                <div class="row"> 
-                    <div class="col-md-9 col-sm-12" style="padding: 0px;">
-                    <input type="hidden" name="lang_current" id="lang_current" value="<?php echo $lang;?>">
-                    <input type="hidden" name="url_lang" value="<?php echo $url_lang;?>" id="url_lang">                    
-                        <h1 class="mainNameNews"><?= $rowLang['lang_news_name']?></h1>
-                        <p class="datePND">Đăng lúc <?= $row['news_created_date']?></p>
-                        <p class="desPageNewsDetail"><?= $rowLang['lang_news_des']?></p>
-                        <div class="contentPageNewsDetail">
-                            <?= $rowLang['lang_news_content']?>
-                        </div>
-                        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
-                        <div class="addthis_inline_share_toolbox" style="margin-top: 15px;"></div>
-                    </div>
-                    <div class="col-md-3 col-sm-12" style="padding: 0px;">
-                        <?php include_once "templates/sideBar/sideBar_tpl_RightBar.php";  ?> 
-                    </div>           
-                </div>
+</div>
+<div id="container" id="aboutus">
+    <div class="wp-content clearfix">
+        <div class="sidebar-left fl-left">
+            <div class="menu-about-us-sidebar-container">
+                <ul class="sub-menu">
+                    <h3 class="title-detail-menu">các món ăn chế biến với</h3>
+                    <li id="menu-item-2526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2526">
+                        <a href="">nấm tươi</a>
+                    </li>
+                    <li id="menu-item-284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284">
+                        <a href="">nấm khô</a>
+                    </li>
+                    <li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-853">
+                        <a href="">thực phẩm từ nấm</a>
+                    </li>
+                    <li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-853">
+                        <a href="">quà tặng nấm</a>
+                    </li>
+                    <li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-853">
+                        <a href="">cây cảnh nấm</a>
+                    </li>
+                    <li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-853">
+                        <a href="">sản phẩm khác</a>
+                    </li>
+                </ul>
             </div>
-        </div><!--end Infor-Width-->  
-    </div><!--end Center-Width-->
-</div><!--end Content-pageDetailNews-->
+        </div>
+        <div class="right-content fl-left">
+            <input type="hidden" name="lang_current" id="lang_current" value="<?php echo $lang;?>">
+            <input type="hidden" name="url_lang" value="<?php echo $url_lang;?>" id="url_lang">     
+            <h1><?= $rowLang['lang_news_name']?></h1>
+            <img src="/images/<?= $row['news_img']?>" alt=""/>
+            <div class="content">
+                <?= $rowLang['lang_news_content']?>
+            </div>
+        </div>
+    </div>
+</div>

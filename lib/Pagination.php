@@ -192,8 +192,8 @@ class Pagination
             // Nút prev và first
             if ($this->_config['current_page'] > 1)
             {
-                $p .= '<li><a href="'.$this->__link('1').'">First</a></li>';
-                $p .= '<li><a href="'.$this->__link($this->_config['current_page']-1).'">Prev</a></li>';
+                $p .= '<li><a href="'.$this->__link('1').'"><i class="fas fa-step-backward"></i></a></li>';
+                $p .= '<li><a href="'.$this->__link($this->_config['current_page']-1).'"><i class="fas fa-backward"></i></a></li>';
             }
              
             // lặp trong khoảng cách giữa min và max để hiển thị các nút
@@ -211,8 +211,8 @@ class Pagination
             // Nút last và next
             if ($this->_config['current_page'] < $this->_config['total_page'])
             {
-                $p .= '<li><a href="'.$this->__link($this->_config['current_page'] + 1).'">Next</a></li>';
-                $p .= '<li><a href="'.$this->__link($this->_config['total_page']).'">Last</a></li>';
+                $p .= '<li><a href="'.$this->__link($this->_config['current_page'] + 1).'"><i class="fas fa-forward"></i></a></li>';
+                $p .= '<li><a href="'.$this->__link($this->_config['total_page']).'"><i class="fas fa-step-forward"></i></a></li>';
             }
              
             $p .= '</ul>';
@@ -272,8 +272,8 @@ class Pagination
             // Nút prev và first
             if ($this->_config['current_page'] > 1)
             {
-                $p .= '<li><a href="'.$this->__link_tuan($link, '1').'">First</a></li>';
-                $p .= '<li><a href="'.$this->__link_tuan($link, $this->_config['current_page']-1).'">Prev</a></li>';
+                $p .= '<li><a href="'.$this->__link_tuan($link, '1').'"><i class="fas fa-step-backward"></i></a></li>';
+                $p .= '<li><a href="'.$this->__link_tuan($link, $this->_config['current_page']-1).'"><i class="fas fa-backward"></i></a></li>';
             }
              
             // lặp trong khoảng cách giữa min và max để hiển thị các nút
@@ -291,8 +291,8 @@ class Pagination
             // Nút last và next
             if ($this->_config['current_page'] < $this->_config['total_page'])
             {
-                $p .= '<li><a href="'.$this->__link_tuan($link, $this->_config['current_page'] + 1).'">Next</a></li>';
-                $p .= '<li><a href="'.$this->__link_tuan($link, $this->_config['total_page']).'">Last</a></li>';
+                $p .= '<li><a href="'.$this->__link_tuan($link, $this->_config['current_page'] + 1).'"><i class="fas fa-forward"></i></a></li>';
+                $p .= '<li><a href="'.$this->__link_tuan($link, $this->_config['total_page']).'"><i class="fas fa-step-forward"></i></a></li>';
             }
              
             $p .= '</ul>';

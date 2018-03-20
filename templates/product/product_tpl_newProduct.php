@@ -54,3 +54,20 @@
     </div>
 </section>
 <!-- SECTION HOME PRODUCT- PRODUCT NEW -->
+<script type="text/javascript">
+    function load_url (id, name, price) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+           // document.getElementById("demo").innerHTML = this.responseText;
+           // alert(this.responseText);
+           // alert('thanh cong.');
+           window.location.href = "/cart-detail";
+          }
+        };
+        xhttp.open("POST", "/themes/namsach/ajax-add-cart.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("action1=add_cart&product_id="+id+"&product_name="+name+"&product_price="+price+"&product_quantity=1&action=add");
+        xhttp.send();        
+    }
+</script>
