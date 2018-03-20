@@ -1,0 +1,2 @@
+<iframe id="fr1" style="border: none;" src="//www.tygia.com/api.php?column=1&amp;title=0&amp;chart=0&amp;gold=0&amp;rate=1&amp;ngoaite=usd,jpy,chf,eur,gbp,aud&amp;expand=0&amp;color=B4D0D0&amp;titlecolor=333333&amp;bgcolor=ffffff&amp;upcolor=00aa00&amp;downcolor=bb0000&amp;textcolor=333333&amp;nganhang=VIETCOM&amp;fontsize=80&amp;ngay=" width="100%" height="200"></iframe>
+<h1>hello tuan</h1>

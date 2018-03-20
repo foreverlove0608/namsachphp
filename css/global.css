@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-left{text-align: right;}
+.fl-left{float: left;}
+.fl-right{float: right;}
+.clearfix:before, .clearfix:after{content: " ";display: block;}
+.clearfix:after{clear: both;}
+a {
+    text-decoration: none;
+}
